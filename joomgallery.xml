@@ -17,8 +17,8 @@
     <language tag="en-GB">language/en-GB/en-GB.plg_quickicon_joomgallery.sys.ini</language>
     <language tag="de-DE">language/de-DE/de-DE.plg_quickicon_joomgallery.ini</language>
     <language tag="de-DE">language/de-DE/de-DE.plg_quickicon_joomgallery.sys.ini</language>
-    <language tag="it-IT">language/it-IT/it-IT.plg_joomgallery_joomlytebox.ini</language>
-    <language tag="it-IT">language/it-IT/it-IT.plg_joomgallery_joomlytebox.sys.ini</language>
+    <language tag="it-IT">language/it-IT/it-IT.plg_quickicon_joomgallery.ini</language>
+    <language tag="it-IT">language/it-IT/it-IT.plg_quickicon_joomgallery.sys.ini</language>
    </languages>
   <scriptfile>script.php</scriptfile>
   <config>
@@ -34,4 +34,7 @@
       </fieldset>
     </fields>
   </config>
+  <updateservers>
+    <server type="collection" priority="1" name="JoomGallery Update Service">https://www.joomgalleryfriends.net/components/com_newversion/xml/extensions3.xml</server>
+  </updateservers>
 </extension>
