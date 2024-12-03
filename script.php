@@ -1,15 +1,16 @@
 <?php
-// $HeadURL: https://joomgallery.org/svn/joomgallery/JG-3/Plugins/JoomQuickicon/trunk/script.php $
-// $Id: script.php 4106 2013-02-20 21:38:54Z erftralle $
 /******************************************************************************\
 **   JoomGallery Plugin 'JoomQuickicon'                                       **
 **   By: JoomGallery::ProjectTeam                                             **
-**   Copyright (C) 2012 - 2013 JoomGallery::ProjectTeam                       **
+**   Copyright (C) 2012 - 2024 JoomGallery::ProjectTeam                       **
 **   Released under GNU GPL Public License                                    **
 **   License: http://www.gnu.org/copyleft/gpl.html                            **
 \******************************************************************************/
 
 defined('_JEXEC') or die;
+
+use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
 
 /**
  * Installer class for the JoomGallery Plugin 'JoomQuickicon'
@@ -22,7 +23,8 @@ class plgQuickiconJoomGalleryInstallerScript
   function install()
   { 
      // Automatically enable the plugin during installation
-    $db = JFactory::getDbo();
+    $app = Factory::getApplication();
+    $db = Factory::getDbo();
     
     $query = $db->getQuery(true)
           ->update('#__extensions')
@@ -32,8 +34,8 @@ class plgQuickiconJoomGalleryInstallerScript
           ->where("folder = 'quickicon'");
      
     $db->setQuery($query);
-    $db->query();
+    $db->execute();
      
-    echo '<p class="alert alert-info">'. JText::_('PLG_QUICKICON_PLUGIN_ENABLED') .'</p>';    
-  } 
+    echo '<p class="alert alert-info">'. Text::_('PLG_QUICKICON_PLUGIN_ENABLED') .'</p>'; 
+  }
 }
