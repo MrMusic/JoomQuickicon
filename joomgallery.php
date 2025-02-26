@@ -1,8 +1,8 @@
 <?php
 /******************************************************************************\
 **   JoomGallery Plugin 'JoomQuickicon'                                       **
-**   By: JoomGallery::ProjectTeam                                             **
 **   Copyright (C) 2012 - 2024 JoomGallery::ProjectTeam                       **
+**   Copyright (C) 2025        MrMusic                                        **
 **   Released under GNU GPL Public License                                    **
 **   License: http://www.gnu.org/copyleft/gpl.html                            **
 \******************************************************************************/
